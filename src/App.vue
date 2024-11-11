@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { RouterLink, RouterView, useRouter } from 'vue-router';
+import { RouterView } from 'vue-router';
 import Header from './components/Header.vue';
 </script>
 
@@ -14,8 +14,6 @@ import Header from './components/Header.vue';
 .Container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 200vh;
 }
 
