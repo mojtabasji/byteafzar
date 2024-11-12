@@ -9,19 +9,28 @@
                 <li><a href="/about">About</a></li>
                 <li><a href="/contact">Contact</a></li>
             </ul>
+            <i class="bi bi-list nav-menu" @click="sidebar = !sidebar"></i>
         </nav>
     </header>
+    <Sidebar v-if="sidebar" @close-sidebar="closeSidebar" />
 </template>
 
 <script>
+import { defineComponent } from 'vue';
+import Sidebar from './Sidebar.vue';
+
 export default {
     name: 'Header',
     props: {
         title: String
     },
-    setup() {
+    components: {
+        Sidebar
+    },
+    data() {
         return {
-            title: 'My Website'
+            title: 'My Website',
+            sidebar: false
         }
     },
     methods: {
@@ -35,6 +44,9 @@ export default {
             } else {
                 header.classList.remove('sticky');
             }
+        },
+        closeSidebar() {
+            this.sidebar = false;
         }
     },
     mounted() {
@@ -45,7 +57,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .header {
     background-color: #33333382;
     color: white;
@@ -85,6 +97,20 @@ export default {
     list-style: none;
     display: flex;
     gap: 1rem;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.nav-menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+        display: block;
+    }
 }
 
 .nav-links a {
