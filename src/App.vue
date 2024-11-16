@@ -10,11 +10,10 @@ import Header from './components/Header.vue';
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .Container {
   display: flex;
   flex-direction: column;
-  height: 200vh;
 }
 
 .test {

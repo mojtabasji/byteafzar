@@ -59,6 +59,7 @@ export default {
 
 <style scoped lang="scss">
 .header {
+    direction: ltr;
     background-color: #33333382;
     color: white;
     padding: 1rem;

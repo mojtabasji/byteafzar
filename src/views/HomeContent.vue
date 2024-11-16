@@ -1,21 +1,17 @@
 <template>
-    <div class="main-content">
-        <br />
-    </div>
     <ScrollVideo />
-    <div class="third-content">
-        <br />
-    </div>
+    <Services />
 </template>
 
 <script>
 import ScrollVideo from '../components/ScrollVideo.vue';
-
+import Services from '../components/Services.vue';
 
 export default {
     name: 'HomeContent',
     components: {
-        ScrollVideo
+        ScrollVideo,
+        Services
     },
     data() {
         return {
