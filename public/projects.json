@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "Project 1",
+        "image": "project1.jpg",
+        "link": "https://www.google.com",
+        "description": "This is project 1"
+    },
+    {
+        "id": 2,
+        "name": "Project 2",
+        "image": "project2.jpg",
+        "link": "https://www.google.com",
+        "description": "This is project 2"
+    },
+    {
+        "id": 3,
+        "name": "Project 3",
+        "image": "project3.jpg",
+        "link": "https://www.google.com",
+        "description": "This is project 3"
+    },
+    {
+        "id": 4,
+        "name": "Project 4",
+        "image": "project4.jpg",
+        "link": "https://www.google.com",
+        "description": "This is project 4"
+    },
+    {
+        "id": 5,
+        "name": "Project 5",
+        "image": "project5.jpg",
+        "link": "https://www.google.com",
+        "description": "This is project 5"
+    },
+    {
+        "id": 6,
+        "name": "Project 6",
+        "image": "project6.jpg",
+        "link": "https://www.google.com",
+        "description": "This is project 6"
+    },
+    {
+        "id": 7,
+        "name": "Project 7",
+        "image": "project7.jpg",
+        "link": "https://www.google.com",
+        "description": "This is project 7"
+    },
+    {
+        "id": 8,
+        "name": "Project 8",
+        "image": "project8.jpg",
+        "link": "https://www.google.com",
+        "description": "This is project 8"
+    }
+]

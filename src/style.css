@@ -11,18 +11,19 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
+
   --color-main-background: rgba(29, 31, 38, 0.97);
   --color-main-text: #f9f9f9;
+  --color-secondary: #ED4159;
   --color-scrollbar-track: #1a1a1a;
   --color-scrollbar-thumb: #8cf02e;
 
 
-    scrollbar-width: thin;
-    scrollbar-color: var(--color-scrollbar-thumb) var(--color-scrollbar-track);
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-scrollbar-thumb) var(--color-scrollbar-track);
 
-    font-family: 'Vazir', sans-serif;
-    
+  font-family: 'Vazir', sans-serif;
+
 }
 
 ::-webkit-scrollbar {
