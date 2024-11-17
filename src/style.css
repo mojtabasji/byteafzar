@@ -17,6 +17,7 @@
   --color-secondary: #ED4159;
   --color-scrollbar-track: #1a1a1a;
   --color-scrollbar-thumb: #8cf02e;
+  --color-disabled-gray: #f9f9f9;
 
 
   scrollbar-width: thin;

@@ -2,12 +2,12 @@
     <header class="header">
         <nav class="navbar">
             <div class="logo">
-                <a href="/">My Website</a>
+                <a href="/">ByteAfzar</a>
             </div>
             <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li><a href="/">خانه</a></li>
+                <li><a href="/about">نمونه کارها</a></li>
+                <li><a href="/contact">ملاقات</a></li>
             </ul>
             <i class="bi bi-list nav-menu" @click="sidebar = !sidebar"></i>
         </nav>
@@ -60,7 +60,7 @@ export default {
 <style scoped lang="scss">
 .header {
     direction: ltr;
-    background-color: #33333382;
+    background-color: #33333333;
     color: white;
     padding: 1rem;
     position: absolute;
@@ -69,6 +69,12 @@ export default {
     box-sizing: border-box;
     transition: all 0.5s ease;
     z-index: 10;
+}
+
+ul {
+    li {
+        margin-left: 1.2rem;
+    }
 }
 
 .sticky {
@@ -80,12 +86,25 @@ export default {
     border-radius: 30px;
     background-color: #333333;
     transition: all 0.5s ease;
+
+    ul {
+        margin: 0;
+        padding-inline-start: 0;
+    }
+
+    .logo {
+        a {
+            font-size: 1.2rem;
+        }
+    }
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .logo a {
@@ -95,6 +114,7 @@ export default {
 }
 
 .nav-links {
+    direction: rtl;
     list-style: none;
     display: flex;
     gap: 1rem;

@@ -3,20 +3,20 @@
     <Services />
     <br />
     <div class="projects">
+        <h2>همکاری های ما</h2>
         <div class="row">
-            <div class="project" v-for="project in projects.slice(0, 4)" :key="project.id" @click="openLink(project.link)">
+            <div class="project" v-for="project in projects.slice(0, 2)" :key="project.id" @click="openLink(project.link)">
+                <img :src="imageSrc(project)" alt="project image" />
+                <h2>{{ project.name }}</h2>
+                <p>{{ project.description }}</p>
+            </div>
+            <div class="project not-mobile" v-for="project in projects.slice(2, 4)" :key="project.id" @click="openLink(project.link)">
+                <img :src="imageSrc(project)" alt="project image" />
                 <h2>{{ project.name }}</h2>
                 <p>{{ project.description }}</p>
             </div>
         </div>
-        <div class="row not-mobile">
-            <div class="project" v-for="project in projects.slice(4, 8)" :key="project.id" @click="openLink(project.link)">
-                <h2>{{ project.name }}</h2>
-                <p>{{ project.description }}</p>
-            </div>
-        </div>
-        <button>
-            < View Project</button>
+        <button> مشاهده سابقه همکاری های ما</button>
     </div>
     <br />
     <Contact />
@@ -47,6 +47,9 @@ export default {
     methods: {
         openLink(link) {
             window.open(link, '_blank');
+        },
+        imageSrc(project) {
+            return `../../public/images/${project.image}`;
         }
 
     },
@@ -68,6 +71,7 @@ export default {
     padding-bottom: 80px;
     background-color: var(--color-main-background);
     width: 100%;
+    color: var(--color-main-text);
 
     .not-mobile {
         @media (max-width: 768px) {
@@ -91,19 +95,31 @@ export default {
         justify-content: center;
         align-self: center;
         min-width: 200px;
-        max-width: 300px;
+        max-width: 200px;
         margin: 50px;
         flex-wrap: wrap-reverse;
+
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 80px;
+            box-shadow: 0px 0px 20px var(--color-secondary);
+        }
     }
 
     button {
         background-color: var(--color-secondary);
         color: var(--color-main-text);
-        padding: 10px 20px;
+        padding: 15px 25px;
         border: none;
         border-radius: 20px;
         cursor: pointer;
         box-shadow: 0px 0px 17px var(--color-secondary);
+
+        font-size: 1.1rem;
+        font-weight: bold;
+
 
         &:hover {
             background-color: transparent;
