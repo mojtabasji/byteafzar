@@ -109,6 +109,7 @@ export default defineComponent({
     width: 60%;
     height: 100vh;
     direction: rtl;
+    z-index:10;
 }
 
 </style>
