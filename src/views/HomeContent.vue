@@ -1,16 +1,17 @@
 <template>
     <ScrollVideo />
     <Services />
-    <br />
     <div class="projects">
         <h2>همکاری های ما</h2>
         <div class="row">
-            <div class="project" v-for="project in projects.slice(0, 2)" :key="project.id" @click="openLink(project.link)">
+            <div class="project" v-for="project in projects.slice(0, 2)" :key="project.id"
+                @click="openLink(project.link)">
                 <img :src="imageSrc(project)" alt="project image" />
                 <h2>{{ project.name }}</h2>
                 <p>{{ project.description }}</p>
             </div>
-            <div class="project not-mobile" v-for="project in projects.slice(2, 4)" :key="project.id" @click="openLink(project.link)">
+            <div class="project not-mobile" v-for="project in projects.slice(2, 4)" :key="project.id"
+                @click="openLink(project.link)">
                 <img :src="imageSrc(project)" alt="project image" />
                 <h2>{{ project.name }}</h2>
                 <p>{{ project.description }}</p>
@@ -18,7 +19,6 @@
         </div>
         <button> مشاهده سابقه همکاری های ما</button>
     </div>
-    <br />
     <Contact />
     <Footer />
 </template>
@@ -107,25 +107,27 @@ export default {
             box-shadow: 0px 0px 20px var(--color-secondary);
         }
     }
+}
+</style>
 
-    button {
-        background-color: var(--color-secondary);
-        color: var(--color-main-text);
-        padding: 15px 25px;
-        border: none;
-        border-radius: 20px;
-        cursor: pointer;
-        box-shadow: 0px 0px 17px var(--color-secondary);
+<style lang="scss">
+button {
+    background-color: var(--color-secondary);
+    color: var(--color-main-text);
+    padding: 15px 25px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0px 0px 17px var(--color-secondary);
 
-        font-size: 1.1rem;
-        font-weight: bold;
+    font-size: 1.1rem;
+    font-weight: bold;
 
 
-        &:hover {
-            background-color: transparent;
-            border: 2px solid var(--color-secondary);
+    &:hover {
+        background-color: transparent;
+        border: 2px solid var(--color-secondary);
 
-        }
     }
 }
 </style>

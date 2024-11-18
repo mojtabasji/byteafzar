@@ -1,7 +1,8 @@
 <template>
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <!-- socials -->
         <div class="socials">
+            <h4>لینک های ارتباطی ما: </h4>
             <a href="https://www.linkedin.com/company/byteafzar" target="_blank" rel="noopener noreferrer">
                 <i class="bi bi-linkedin"></i>
             </a>

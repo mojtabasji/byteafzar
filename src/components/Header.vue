@@ -7,7 +7,7 @@
             <ul class="nav-links">
                 <li><a href="/">خانه</a></li>
                 <li><a href="/about">نمونه کارها</a></li>
-                <li><a href="/contact">ملاقات</a></li>
+                <li><a href="#contact">گپ و گفت با ما</a></li>
             </ul>
             <i class="bi bi-list nav-menu" @click="sidebar = !sidebar"></i>
         </nav>
