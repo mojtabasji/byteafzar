@@ -123,10 +123,12 @@ export default {
         width: 50%;
         box-sizing: border-box;
         border-radius: 50px;
-        background-color: var(--color-main-background);
+        // background-color: var(--color-main-background);
+        background-color: #c0dedc;
+        // background: linear-gradient(135deg, #3289a0 0%, #edccbb 100%);
         margin: 20px;
-
-        box-shadow: 0 0 20px #fff3;
+        color: #1d1c20;
+        // box-shadow: 0 0 20px #fff3;
 
         h3 {
             margin-bottom: 5px;
@@ -165,6 +167,9 @@ export default {
             padding: 10px;
             margin-bottom: 15px;
             border-radius: 20px;
+            background-color: transparent;
+            border-width: 2px;
+            border-color: #1d1c20;
         }
 
         textarea {

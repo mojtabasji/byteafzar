@@ -12,7 +12,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --color-main-background: rgba(29, 31, 38, 0.97);
+  --color-main-background: #1d1c20;
   --color-main-text: #f9f9f9;
   --color-secondary: #ED4159;
   --color-scrollbar-track: #1a1a1a;
@@ -23,7 +23,10 @@
   scrollbar-width: thin;
   scrollbar-color: var(--color-scrollbar-thumb) var(--color-scrollbar-track);
 
-  font-family: 'Vazir', sans-serif;
+  /* font-family: 'Vazir', sans-serif; */
+  font-family: "Lateef", serif;
+  font-weight: 500;
+  font-style: normal;
 
 }
 
@@ -81,7 +84,7 @@ button:focus-visible {
 }
 
 #app {
-  background: linear-gradient(135deg, #7ff7cb, #550555);
+  background: linear-gradient(45deg, #427187, #12171a);
   min-width: -webkit-fill-available;
   min-height: 100vh;
   position: relative;
