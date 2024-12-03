@@ -36,27 +36,35 @@ export default {
     video.addEventListener('loadedmetadata', () => {
       const totalFrames = Math.floor(video.duration * 60); // Assuming 60 FPS for smoother frame change
       const VideoScrollController = document.getElementById('VideoScrollController');
-      VideoScrollController.style.height = `${totalFrames * 50 }px`;
+      VideoScrollController.style.height = `${totalFrames * 10 }px`;
       let currentFrame = 0;
 
       // Function to update video frame based on scroll
       const updateVideoFrame = () => {
-      const frameTime = currentFrame / 60; // Convert frame number to time
-      video.currentTime = frameTime; // Update video time
-      processBar.style.width = `${(currentFrame / totalFrames) * 100}%`;
+        const frameTime = currentFrame / 60; // Convert frame number to time
+        video.currentTime = frameTime; // Update video time
+        processBar.style.width = `${(currentFrame / totalFrames) * 100}%`;
       };
 
+      let isScrolling = false;
+
       scrollContainer.addEventListener('scroll', () => {
-      const maxScroll = scrollContainer.scrollHeight - scrollContainer.clientHeight;
-      const scrollPosition = scrollContainer.scrollTop;
+        if (!isScrolling) {
+          window.requestAnimationFrame(() => {
+            const maxScroll = scrollContainer.scrollHeight - scrollContainer.clientHeight;
+            const scrollPosition = scrollContainer.scrollTop;
 
-      // Calculate current frame based on scroll position
-      currentFrame = Math.floor((scrollPosition / maxScroll) * totalFrames);
+            // Calculate current frame based on scroll position
+            currentFrame = Math.floor((scrollPosition / maxScroll) * totalFrames);
 
-      // Ensure current frame stays within bounds
-      currentFrame = Math.max(0, Math.min(currentFrame, totalFrames - 1));
+            // Ensure current frame stays within bounds
+            currentFrame = Math.max(0, Math.min(currentFrame, totalFrames - 1));
 
-      updateVideoFrame();
+            updateVideoFrame();
+            isScrolling = false;
+          });
+          isScrolling = true;
+        }
       });
     });
   }
