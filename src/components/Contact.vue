@@ -87,10 +87,11 @@ export default {
     padding-bottom: 50px;
 
     Button {
-        width: 50%;
+        width: 30%;
         align-self: center;
         margin-top: 50px;
         margin-bottom: 30px;
+        color: var(--color-main-text);
     }
 
     .details {
@@ -124,11 +125,11 @@ export default {
         box-sizing: border-box;
         border-radius: 50px;
         // background-color: var(--color-main-background);
-        background-color: #c0dedc;
+        background-color: var(--color-secondary-background);
         // background: linear-gradient(135deg, #3289a0 0%, #edccbb 100%);
         margin: 20px;
         color: #1d1c20;
-        // box-shadow: 0 0 20px #fff3;
+        box-shadow: 0 0 14px 8px rgba(0, 0, 0, 0.2);
 
         h3 {
             margin-bottom: 5px;
@@ -372,6 +373,8 @@ export default {
         animation-duration: 20s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
+        box-shadow: 0 0 6px 2px var(--color-secondary);
+        border-radius: 50%;
     }
 
     .snake-border::before {

@@ -2,22 +2,22 @@
     <ScrollVideo />
     <Services />
     <div class="projects">
-        <h2>همکاری های ما</h2>
+        <h2>سابقه همکاری های ما</h2>
         <div class="row">
             <div class="project" v-for="project in projects.slice(0, 2)" :key="project.id"
                 @click="openLink(project.link)">
                 <img :src="imageSrc(project)" alt="project image" />
-                <h2>{{ project.name }}</h2>
+                <h3>{{ project.name }}</h3>
                 <p>{{ project.description }}</p>
             </div>
             <div class="project not-mobile" v-for="project in projects.slice(2, 4)" :key="project.id"
                 @click="openLink(project.link)">
                 <img :src="imageSrc(project)" alt="project image" />
-                <h2>{{ project.name }}</h2>
+                <h3>{{ project.name }}</h3>
                 <p>{{ project.description }}</p>
             </div>
         </div>
-        <button> مشاهده سابقه همکاری های ما</button>
+        <button> مشاهده بیشتر</button>
     </div>
     <Contact />
     <Footer />
@@ -69,7 +69,7 @@ export default {
     align-self: center;
     padding-top: 50px;
     padding-bottom: 80px;
-    background-color: var(--color-main-background);
+    background: var(--color-main-background);
     width: 100%;
     color: var(--color-main-text);
 
@@ -88,7 +88,24 @@ export default {
         width: 100%;
     }
 
+    h2 {
+        color: var(--color-secondary);
+        font-size: 1.8em;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        color: var(--color-main-text);
+        font-size: 1.4em;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
     .project {
+        background: var(--color-secondary-background);
+        border-radius: 15px;
+        padding: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -98,20 +115,41 @@ export default {
         max-width: 200px;
         margin: 50px;
         flex-wrap: wrap-reverse;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s;
+
+        p {
+            color: var(--color-secondary-text);
+            font-size: 0.9em;
+        }
 
         img {
-            width: 100%;
-            height: 200px;
+            width: 80%;
+            aspect-ratio: 1/1;
             object-fit: cover;
+            margin-bottom: 20px;
             border-radius: 80px;
-            box-shadow: 0px 0px 20px var(--color-secondary);
         }
+    }
+
+    .project:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 8px 15px rgba(0, 255, 150, 0.2);
+    }
+
+    button {
+        margin-top: 50px;
+        padding: 15px 50px;
     }
 }
 </style>
 
 <style lang="scss">
-button {
+
+</style>
+
+
+<!-- button {
     background-color: var(--color-secondary);
     color: var(--color-main-text);
     padding: 15px 25px;
@@ -129,5 +167,4 @@ button {
         border: 2px solid var(--color-secondary);
 
     }
-}
-</style>
+} -->

@@ -12,9 +12,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --color-main-background: #1d1c20;
-  --color-main-text: #f9f9f9;
-  --color-secondary: #ED4159;
+  --color-main-background: #141414;
+  --color-main-text: #fff;
+  --color-secondary-text: #b3b3b3;
+  --color-secondary-background: #1f1f1f;
+  --color-secondary: #4caf50;
   --color-scrollbar-track: #1a1a1a;
   --color-scrollbar-thumb: #8cf02e;
   --color-disabled-gray: #f9f9f9;
@@ -28,6 +30,17 @@
   font-weight: 500;
   font-style: normal;
 
+}
+
+#app {
+  background: linear-gradient(45deg, #427187, #12171a);
+  min-width: -webkit-fill-available;
+  min-height: 100vh;
+  position: relative;
+  color: var(--color-main-text);
+  font-family: "Almarai", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 ::-webkit-scrollbar {
@@ -61,17 +74,21 @@ h1 {
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 0.8em 1.4em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  /* background-color: #1a1a1a; */
+  background: linear-gradient(to right, #4caf50, #2e7d32);
+  color: inherit;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 
 button:hover {
-  border-color: #646cff;
+  /* border-color: #646cff; */
+  background: linear-gradient(to right, #66bb6a, #388e3c);
+  box-shadow: 0 0 8px 0px var(--color-secondary)
 }
 
 button:focus,
@@ -81,14 +98,9 @@ button:focus-visible {
 
 .card {
   padding: 2em;
+  background-color: #2e7d32;
 }
 
-#app {
-  background: linear-gradient(45deg, #427187, #12171a);
-  min-width: -webkit-fill-available;
-  min-height: 100vh;
-  position: relative;
-}
 
 @media (prefers-color-scheme: light) {
   :root {

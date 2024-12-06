@@ -1,6 +1,6 @@
 <template>
 <div class="services">
-    <h1>{{ title }}</h1>
+    <h2>{{ title }}</h2>
     <div class="services-content">
         <div class="service">
             <div class="img">
@@ -82,9 +82,13 @@ export default defineComponent({
     padding-top: 2rem;
     padding-bottom: 2rem;
 
-    h1 {
-        color: red;
+    h2 {
+        color: var(--color-secondary);
+        font-size: 1.8em;
+        font-weight: bold;
+        margin-bottom: 10px;
         text-align: center;
+        margin-bottom: 3rem;
     }
 
     .services-content {
@@ -127,9 +131,9 @@ export default defineComponent({
             }
 
             p {
-                font-size: 1.2rem;
+                font-size: 1rem;
                 // font-weight: bold;
-                color: var(--color-main-text);
+                color: var(--color-secondary-text);
                 text-align: center;
             }
         }
