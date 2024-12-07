@@ -28,7 +28,7 @@ export default {
     const video = document.getElementById('backgroundVideo');
     const scrollContainer = document.getElementById('scrollingArea');
     const processBar = document.getElementById('processBar');
-
+    window.video = video;
     // Set the number of frames per scroll
     const framesPerScroll = 1;
 
@@ -48,9 +48,28 @@ export default {
 
       let isScrolling = false;
 
-      scrollContainer.addEventListener('scroll', () => {
-        if (!isScrolling) {
-          window.requestAnimationFrame(() => {
+      // // Listen during scroll event
+      // scrollContainer.addEventListener('scroll', () => {
+      //   // if (!isScrolling) {
+      //     window.requestAnimationFrame(() => {
+      //       const maxScroll = scrollContainer.scrollHeight - scrollContainer.clientHeight;
+      //       const scrollPosition = scrollContainer.scrollTop;
+
+      //       // Calculate current frame based on scroll position
+      //       currentFrame = Math.floor((scrollPosition / maxScroll) * totalFrames);
+
+      //       // Ensure current frame stays within bounds
+      //       currentFrame = Math.max(0, Math.min(currentFrame, totalFrames - 1));
+
+      //       updateVideoFrame();
+      //       isScrolling = false;
+      //     });
+      //   //   isScrolling = true;
+      //   // }
+      // });
+
+      scrollContainer.onscroll = function() {
+        window.requestAnimationFrame(() => {
             const maxScroll = scrollContainer.scrollHeight - scrollContainer.clientHeight;
             const scrollPosition = scrollContainer.scrollTop;
 
@@ -63,9 +82,8 @@ export default {
             updateVideoFrame();
             isScrolling = false;
           });
-          isScrolling = true;
-        }
-      });
+      };
+
     });
   }
 }
