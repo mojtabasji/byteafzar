@@ -2,7 +2,7 @@
     <ScrollVideo />
     <Services />
     <div class="projects">
-        <h2>سابقه همکاری های ما</h2>
+        <h2>سوابق همکاری ما</h2>
         <div class="row">
             <div class="project" v-for="project in projects.slice(0, 2)" :key="project.id"
                 @click="openLink(project.link)">
@@ -17,13 +17,13 @@
                 <p>{{ project.description }}</p>
             </div>
         </div>
-        <button> مشاهده بیشتر</button>
+        <button @click="openLink('https://bytecraft.ir/projects', false)"> مشاهده بیشتر</button>
     </div>
     <Contact />
     <Footer />
 </template>
 
-<script>
+<script lang="ts">
 import ScrollVideo from '../components/ScrollVideo.vue';
 import Services from '../components/Services.vue';
 import Footer from '../components/Footer.vue';
@@ -45,8 +45,8 @@ export default {
         };
     },
     methods: {
-        openLink(link) {
-            window.open(link, '_blank');
+        openLink(link: string, _blank = true) {
+            window.open(link, _blank ? '_blank' : '_self');
         },
         imageSrc(project) {
             return `../../public/images/${project.image}`;
@@ -86,6 +86,8 @@ export default {
         align-items: center;
         align-self: center;
         width: 100%;
+        margin-top: 50px;
+        text-align: center;
     }
 
     h2 {
@@ -111,16 +113,18 @@ export default {
         align-items: center;
         justify-content: center;
         align-self: center;
-        min-width: 200px;
-        max-width: 200px;
-        margin: 50px;
+        max-width: 170px;
+        min-height: 300px;
+        margin: 25px;
         flex-wrap: wrap-reverse;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         transition: transform 0.3s;
+        cursor: pointer;
 
         p {
             color: var(--color-secondary-text);
             font-size: 0.9em;
+            max-width: 150px;
         }
 
         img {
@@ -129,6 +133,7 @@ export default {
             object-fit: cover;
             margin-bottom: 20px;
             border-radius: 80px;
+            filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.39));
         }
     }
 
@@ -144,27 +149,3 @@ export default {
 }
 </style>
 
-<style lang="scss">
-
-</style>
-
-
-<!-- button {
-    background-color: var(--color-secondary);
-    color: var(--color-main-text);
-    padding: 15px 25px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    box-shadow: 0px 0px 17px var(--color-secondary);
-
-    font-size: 1.1rem;
-    font-weight: bold;
-
-
-    &:hover {
-        background-color: transparent;
-        border: 2px solid var(--color-secondary);
-
-    }
-} -->

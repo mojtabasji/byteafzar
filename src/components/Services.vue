@@ -1,5 +1,5 @@
 <template>
-<div class="services">
+<div class="services" id="services">
     <h2>{{ title }}</h2>
     <div class="services-content">
         <div class="service">
@@ -79,7 +79,7 @@ export default defineComponent({
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 2rem;
+    padding-top: 4rem;
     padding-bottom: 2rem;
 
     h2 {
@@ -102,11 +102,13 @@ export default defineComponent({
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 1rem;
+            padding: 0.5rem;
             border: 1px solid var(--color-main-border);
             border-radius: 5px;
             color: var(--color-main-text);
-            max-width: 180px;
+            width: 3%;
+            min-width: 110px;
+            max-width: 150px;
             max-height: 250px;
             margin: 0.5rem;
 
@@ -118,9 +120,6 @@ export default defineComponent({
                 display: flex;
                 justify-content: center;
 
-                &:hover {
-                    transform: rotate(-30deg);
-                }
 
                 transition: transform 0.3s;
 
@@ -135,6 +134,22 @@ export default defineComponent({
                 // font-weight: bold;
                 color: var(--color-secondary-text);
                 text-align: center;
+            }
+
+            &:hover {
+                .img {
+                    transform: rotate(-30deg);
+                }
+
+                p {
+                    color: var(--color-secondary);
+                }
+
+                transition: transform 0.3s;
+
+                .service-icon {
+                    color: var(--color-secondary);
+                }
             }
         }
     }

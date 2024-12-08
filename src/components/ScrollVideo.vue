@@ -12,6 +12,7 @@
         <br />
       </div>
     </div>
+    <div class="whiteUpper" @click="scrollTo('#services')"></div>
   </div>
 </template>
 
@@ -85,6 +86,12 @@ export default {
       };
 
     });
+  },
+  methods: {
+    scrollTo(selector) {
+      console.log(selector);
+      document.querySelector(selector).scrollIntoView({ behavior: 'smooth' });
+    }
   }
 }
 
@@ -93,8 +100,12 @@ export default {
 <style lang="scss">
 .videoScrollArea {
   width: 100%;
-  height: 100vh;
+  height: 99vh;
   position: relative;
+
+  @media (max-width: 768px) {
+    height: 87vh;
+  }
 
   .video {
     width: 100%;
@@ -109,6 +120,22 @@ export default {
     height: 100%;
     position: relative;
     scrollbar-width: none;
+  }
+
+  .whiteUpper {
+    width: 20vw;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -2px;
+    align-self: center;
+    left: calc(50% - 10vw);
+    border-radius: 3px;
+
+    @media (max-width: 768px) {
+      width: 40vw;
+      left: calc(50% - 20vw);
+    }
   }
 
 }

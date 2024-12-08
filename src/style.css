@@ -30,6 +30,7 @@
   font-weight: 500;
   font-style: normal;
 
+  scroll-behavior: smooth;
 }
 
 #app {

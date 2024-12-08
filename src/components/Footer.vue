@@ -17,7 +17,7 @@
             </a>
         </div>
         <!-- copy right -->
-        <p>&copy; 1403 ByteAfzar. تمام حقوق محفوض است.</p>
+        <p>&copy; 1403 تمام حقوق این وبسایت برای <a>ByteAfzar</a> محفوض می باشد.</p>
     </footer>
 </template>
 
@@ -94,7 +94,7 @@ export default {
     @media (max-width: 400px) {
         .socials {
             a {
-                margin: 0 1px;
+                margin: 0 5px;
             }
         }
     }

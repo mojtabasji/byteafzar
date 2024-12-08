@@ -84,8 +84,9 @@ ul {
     margin-right: auto;
     width: 80%;
     border-radius: 30px;
-    background-color: #333333;
+    background-color: var(--color-secondary-background);
     transition: all 0.5s ease;
+    box-shadow: 0 0 8px 5px rgba(0, 0, 0, 0.4);
 
     ul {
         margin: 0;

@@ -1,23 +1,23 @@
 [
     {
         "id": 1,
-        "name": "Project 1",
-        "image": "project-placeholder.png",
-        "link": "https://www.google.com",
-        "description": "This is project 1"
+        "name": "Expert",
+        "image": "expert.png",
+        "link": "https://expert.bytecraft.ir",
+        "description": "پلتفرم پرسش و پاسخ به صورت تخصصی"
     },
     {
         "id": 2,
-        "name": "Project 2",
-        "image": "project-placeholder.png",
-        "link": "https://www.google.com",
-        "description": "This is project 2"
+        "name": "Tanker",
+        "image": "tanker.jpg",
+        "link": "https://t.me/Tanker_coin_bot",
+        "description": "ربات و مینی اپ تلگرامی"
     },
     {
         "id": 3,
-        "name": "Project 3",
-        "image": "project-placeholder.png",
-        "link": "https://www.google.com",
+        "name": "Unidoct",
+        "image": "unidoct.png",
+        "link": "https://unidoct.ir/",
         "description": "This is project 3"
     },
     {
