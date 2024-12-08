@@ -1,7 +1,7 @@
 <template>
     <ScrollVideo />
     <Services />
-    <div class="projects">
+    <div class="projects" id="projects">
         <h2>سوابق همکاری ما</h2>
         <div class="row">
             <div class="project" v-for="project in projects.slice(0, 2)" :key="project.id"

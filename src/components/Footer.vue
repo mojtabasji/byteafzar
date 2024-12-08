@@ -15,9 +15,12 @@
             <a href="https://www.github.com/byteafzar" target="_blank" rel="noopener noreferrer">
                 <i class="bi bi-github"></i>
             </a>
+            <a href="https://t.me/byteafzar" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-telegram"></i>
+            </a>
         </div>
         <!-- copy right -->
-        <p>&copy; 1403 تمام حقوق این وبسایت برای <a>ByteAfzar</a> محفوض می باشد.</p>
+        <p>&copy; 1403: تمام حقوق این وبسایت برای <a>ByteAfzar</a> محفوض می باشد.</p>
     </footer>
 </template>
 
@@ -36,7 +39,7 @@ export default {
 <style scoped>
 .footer {
     padding: 20px 0;
-    background-color: #333;
+    background-color: var(--color-secondary-background);
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -44,6 +47,11 @@ export default {
     align-items: center;
     bottom: 0;
     width: 100%;
+
+    a {
+        color: var(--color-secondary);
+        text-decoration: none;
+    }
 
     .socials {
         display: flex;
@@ -68,7 +76,7 @@ export default {
     }
 
     i:hover {
-        color: #007bff;
+        color: var(--color-secondary);
     }
 
     a {

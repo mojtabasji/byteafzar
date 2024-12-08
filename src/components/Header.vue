@@ -2,11 +2,13 @@
     <header class="header">
         <nav class="navbar">
             <div class="logo">
-                <a href="/">ByteAfzar</a>
+                <img src="../assets/logo_image.png" alt="logo" />
+                <a href="/"><span>Byte</span>Afzar</a>
             </div>
             <ul class="nav-links">
-                <li><a href="/">خانه</a></li>
-                <li><a href="/about">نمونه کارها</a></li>
+                <li><a href="#home">خانه</a></li>
+                <li><a href="#services">خدمات ما</a></li>
+                <li><a href="#projects">نمونه کارها</a></li>
                 <li><a href="#contact">گپ و گفت با ما</a></li>
             </ul>
             <i class="bi bi-list nav-menu" @click="sidebar = !sidebar"></i>
@@ -60,7 +62,7 @@ export default {
 <style scoped lang="scss">
 .header {
     direction: ltr;
-    background-color: #33333333;
+    background-color: #33333366;
     color: white;
     padding: 1rem;
     position: absolute;
@@ -69,11 +71,42 @@ export default {
     box-sizing: border-box;
     transition: all 0.5s ease;
     z-index: 10;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        a {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        span {
+            color: var(--color-secondary);
+        }
+    }
+
 }
 
 ul {
     li {
         margin-left: 1.2rem;
+        
+        a {
+            font-weight: bold;
+            &:hover {
+                // remove text underline
+                text-decoration: none;
+                color: var(--color-secondary);
+            }
+        }
     }
 }
 
@@ -94,9 +127,24 @@ ul {
     }
 
     .logo {
-        a {
-            font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        img {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
         }
+
+        a {
+            font-size: 1.4rem;
+        }
+
+        span {
+            color: var(--color-secondary);
+        }
+
     }
 }
 

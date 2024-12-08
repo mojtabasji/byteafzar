@@ -12,7 +12,9 @@
         <br />
       </div>
     </div>
-    <div class="whiteUpper" @click="scrollTo('#services')"></div>
+    <div class="whiteUpperArea" @click="scrollTo('#services')" @drag="scrollTo('#services')">
+      <div class="whiteUpper"></div>
+    </div>
   </div>
 </template>
 
@@ -122,20 +124,29 @@ export default {
     scrollbar-width: none;
   }
 
+  .whiteUpperArea {
+    padding: 10px;
+    position: absolute;
+    bottom: -12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    left: calc(50% - 10vw - 10px);
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+      width: 60vw;
+      left: calc(50% - 30vw);
+    }
+  }
+
   .whiteUpper {
     width: 20vw;
     height: 4px;
     background-color: #fff;
-    position: absolute;
-    bottom: -2px;
     align-self: center;
-    left: calc(50% - 10vw);
     border-radius: 3px;
-
-    @media (max-width: 768px) {
-      width: 40vw;
-      left: calc(50% - 20vw);
-    }
   }
 
 }

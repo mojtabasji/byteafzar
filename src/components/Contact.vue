@@ -19,7 +19,7 @@
         </div>
         <div class="form snake-border">
             <h3>درخواست ارسال کنید</h3>
-            <h4>و یا از طریق <a href="#footer">لینک های </a>ما با ما در ارتباط باشید</h4>
+            <h4>و یا از طریق <a href="#footer">لینک های ارتباطی ما </a> با ما در ارتباط باشید</h4>
             <label for="name">نام و نشان</label>
             <input type="text" id="name" name="name" placeholder="نام شما">
             
@@ -30,7 +30,7 @@
                 <option value="3">مشاوره رایگان طراحی و ساخت نرم افزار و سایت</option>
                 <option value="4">طراحی و توسعه وب سایت و وب اپلیکیشن</option>
                 <option value="5">ارتقاء نرم افزار و پلتفرم موجود</option>
-                <option value="6">دیپلوی و راه اندازی سرویسهای ایجاد شد DevOps</option>
+                <option value="6">دیپلوی و راه اندازی سرویسهای ایجاد شد</option>
                 <option value="7">خطایابی و رفع مشکلات محصولات توسعه داده شده</option>
                 <option value="other">سایر</option>
             </select>
@@ -110,11 +110,12 @@ export default {
     flex-direction: row;
     justify-content: center;
     align-self: center;
-    padding-top: 50px;
+    padding-top: 100px;
     padding-bottom: 50px;
     background-color: var(--color-main-background);
     width: 100%;
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     box-sizing: border-box;
     color: var(--color-main-text);
     padding-bottom: 50px;
@@ -139,6 +140,7 @@ export default {
         min-width: 300px;
         padding: 20px;
         box-sizing: border-box;
+        max-width: 750px;
 
         h2 {
             margin-bottom: 2rem;
@@ -176,6 +178,7 @@ export default {
         align-self: center;
         padding: 40px;
         width: 50%;
+        max-width: 750px;
         box-sizing: border-box;
         border-radius: 20px;
         // background-color: var(--color-main-background);
@@ -220,6 +223,7 @@ export default {
             margin-bottom: 10px;
             margin-top: 20px;
             font-size: 1rem;
+            font-weight: bold;
             align-self: start;
         }
 
