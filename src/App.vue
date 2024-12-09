@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router';
 import Header from './components/Header.vue';
+import Loading from './components/Loading.vue';
 </script>
 
 <template>
+  <Loading/>
   <Header />
   <div class="Container" id="home">
     <RouterView />

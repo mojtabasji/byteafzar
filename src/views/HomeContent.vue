@@ -28,7 +28,7 @@ import ScrollVideo from '../components/ScrollVideo.vue';
 import Services from '../components/Services.vue';
 import Footer from '../components/Footer.vue';
 import Contact from '../components/Contact.vue';
-import projectsList from '../../public/projects.json';
+import projectsList from '../assets/projects.json';
 
 export default {
     name: 'HomeContent',
@@ -49,7 +49,7 @@ export default {
             window.open(link, _blank ? '_blank' : '_self');
         },
         imageSrc(project) {
-            return `../../public/images/${project.image}`;
+            return `/images/${project.image}`;
         }
 
     },
