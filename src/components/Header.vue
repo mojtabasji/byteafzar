@@ -6,7 +6,7 @@
                 <a href="/"><span>Byte</span>Afzar</a>
             </div>
             <ul class="nav-links">
-                <li><a href="#home">خانه</a></li>
+                <li><a href="/#home">خانه</a></li>
                 <li><a href="#services">خدمات ما</a></li>
                 <li><a href="#projects">نمونه کارها</a></li>
                 <li><a href="#contact">گپ و گفت با ما</a></li>
