@@ -20,13 +20,11 @@
         <button @click="openLink('https://bytecraft.ir/projects', false)"> مشاهده بیشتر</button>
     </div>
     <Contact />
-    <Footer />
 </template>
 
 <script lang="ts">
 import ScrollVideo from '../components/ScrollVideo.vue';
 import Services from '../components/Services.vue';
-import Footer from '../components/Footer.vue';
 import Contact from '../components/Contact.vue';
 import projectsList from '../assets/projects.json';
 
@@ -36,7 +34,6 @@ export default {
         ScrollVideo,
         Services,
         Contact,
-        Footer
     },
     data() {
         return {

@@ -71,11 +71,11 @@ svg {
     animation: slide $transition-duration linear infinite;
     
     &:nth-child(2) {
-      animation-delay: $transition-duration / 4;
+      animation-delay: calc($transition-duration / 4);
       
       path {
-        animation-delay: $transition-duration / 4;
-        stroke-dasharray: 0px $path-length + 1;
+        animation-delay: calc($transition-duration / 4);
+        stroke-dasharray: 0px calc($path-length + 1px);
         stroke-dashoffset: 1px;
       }
     }

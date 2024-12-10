@@ -2,6 +2,7 @@
 import { RouterView } from 'vue-router';
 import Header from './components/Header.vue';
 import Loading from './components/Loading.vue';
+import Footer from './components/Footer.vue';
 </script>
 
 <template>
@@ -10,12 +11,14 @@ import Loading from './components/Loading.vue';
   <div class="Container" id="home">
     <RouterView />
   </div>
+  <Footer />
 </template>
 
 <style scoped lang="scss">
 .Container {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .test {

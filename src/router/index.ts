@@ -9,7 +9,12 @@ const routes = createRouter({
             path: '/',
             name: 'Home',
             component: Home,
-        }
+        },
+        {
+            path: '/articles/:slug',
+            name: 'Article',
+            component: () => import('../views/Article.vue'),
+        },
     ]
 });
 

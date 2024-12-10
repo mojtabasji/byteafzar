@@ -10,6 +10,7 @@
                 <li><a href="#services">خدمات ما</a></li>
                 <li><a href="#projects">نمونه کارها</a></li>
                 <li><a href="#contact">گپ و گفت با ما</a></li>
+                <li><a href="/articles/طراحی%20و%20توسعه%20نرم%20افزار'">مقالات</a></li>
             </ul>
             <i class="bi bi-list nav-menu" @click="sidebar = !sidebar"></i>
         </nav>
