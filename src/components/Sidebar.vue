@@ -1,7 +1,7 @@
 <template>
     <aside class="sidebar">
         <div class="sidebar__logo">
-            <img src="../assets/logo.png" alt="Logo" />
+            <img src="../assets/logo_image.png" alt="Logo" />
         </div>
         <nav class="sidebar__nav">
             <ul>
